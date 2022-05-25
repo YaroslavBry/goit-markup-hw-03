@@ -9,8 +9,18 @@
   --background-color-lightgrey: #f5f4fa;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before. *::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: Roboto, sans-serif;
+  margin: 0;
 }
 
 button {
@@ -21,6 +31,11 @@ button {
   line-height: 1.88;
   letter-spacing: 0.06em;
   border: 0px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: inline-block;
+  /* text-align: center; */
+  /* margin-top: 30px; */
 }
 
 h2 {
@@ -31,7 +46,34 @@ h2 {
   text-align: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
 /* Стилизация шапки сайта */
+.hero-background {
+  background-color: var(--background-color-dark);
+}
 
 .logo {
   font-family: Raleway, sans-serif;
@@ -97,11 +139,15 @@ h2 {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.nav-contact:hover {
+  color: var(--accent-color);
+}
 
 /* Стилизация банера */
+
 .baner-title {
   color: var(--white-text-color);
-  background-color: var(--background-color-dark);
+  /* background-color: var(--background-color-dark); */
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
@@ -109,6 +155,7 @@ h2 {
   text-align: center;
   letter-spacing: 0.06em;
   list-style: none;
+  margin-bottom: 30px;
 }
 
 /* Стилизация секции 1 преимущества */
@@ -124,6 +171,7 @@ h2 {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .benefit-desctription {
@@ -144,17 +192,34 @@ h2 {
   letter-spacing: 0.03em;
 }
 
+/* Стилизация секции 2 Чем мы занимаемся */
+.head-whatwedo {
+  padding-bottom: 50px;
+}
+
 /* Стилизация секции 3 Наша команда */
+
+.img-team {
+  /* display: inline-block */
+  margin-bottom: 30px;
+}
+
+.head-team {
+  margin-bottom: 50px;
+}
 
 .our-team {
   background-color: var(--background-color-lightgrey);
 }
-
+.our-team .h2 {
+  margin-bottom: 50px;
+}
 .team {
   list-style: none;
 }
 
 .team-title {
+  margin-bottom: 10px;
   color: var(--primaty-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -172,6 +237,11 @@ h2 {
 
 /* Стилизация футера */
 
+.logo-footer {
+  display: inline-block;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
 .footer {
   background-color: var(--background-color-dark);
 }
@@ -210,6 +280,8 @@ h2 {
 }
 
 .radiobutton-portfolio {
+  display: block;
+  font-family: Roboto, sans-serif;
   color: var(--primaty-text-color);
   background-color: var(--background-color-lightgrey);
   list-style: none;
@@ -218,6 +290,7 @@ h2 {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
 }
 
 .radiobutton-portfolio:hover {
@@ -231,6 +304,7 @@ h2 {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .portfolio-description {
@@ -241,6 +315,18 @@ h2 {
   letter-spacing: 0.03em;
 }
 
+.portfolio-img {
+  padding-bottom: 20px;
+}
 /* .list-dot {
   list-style-type: none;
 } */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  outline: 1px solid tomato;
+  padding-left: 15px;
+  padding-right: 15px;
+}
