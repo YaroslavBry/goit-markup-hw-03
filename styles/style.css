@@ -23,7 +23,7 @@ body {
   margin: 0;
 }
 
-button {
+/* .button {
   color: var(--white-text-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -33,7 +33,8 @@ button {
   border: 0px;
   border-radius: 4px;
   padding: 10px 32px;
-  display: inline-block;
+  display: inline-block; */
+  /* justify-content: center; */
   /* text-align: center; */
   /* margin-top: 30px; */
 }
@@ -58,6 +59,7 @@ h8 {
   margin-bottom: 0;
   padding-left: 0;
 }
+
 ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -70,7 +72,23 @@ p {
   padding-left: 0;
 }
 
-/* Стилизация шапки сайта */
+.list {
+  list-style: none;
+}
+
+/* .link {
+  text-decoration: none;
+} */
+
+/* ------------Стилизация HEADER------------ */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+/* ------Стилизация ЛОГОТИПА------ */
 .hero-background {
   background-color: var(--background-color-dark);
 }
@@ -82,6 +100,8 @@ p {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  /* margin-left: 215px; */
+  margin-right: 93px;
 }
 
 .logo-accent {
@@ -108,42 +128,65 @@ p {
   letter-spacing: 0.03em;
 }
 
+/* ------Стилизация НАВИГАЦИИ САЙТА------ */
+
 .nav-list {
-  color: var(--primaty-text-color);
-  text-decoration: none;
-}
-
-.nav-list:hover {
-  color: var(--accent-color);
-}
-
-.nav-ul {
-  list-style-type: none;
-}
-
-.nav-li {
-  list-style-type: none;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  /* list-style: none; */
   color: var(--primaty-text-color);
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.nav-contact {
+.nav-item {
+  margin-right: 50px;
+  /* background-color: tomato; */
+}
+
+.nav-item:last-child {
+  margin-right: 0px;
+}
+
+.nav-link {
+  color: var(--primaty-text-color);
+  display: block;
+  text-decoration: none;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+.site-contact {
   /* list-style-type: none; */
+  display: flex;
   text-decoration: none;
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
+  margin-left: auto;
 }
-.nav-contact:hover {
+
+.site-contact .site-contact-item + .site-contact-item {
+  margin-left: 50px;
+}
+
+.site-contact:hover,
+.site-contant:focus {
   color: var(--accent-color);
 }
 
-/* Стилизация банера */
+/* Стилизация ГЕРОЯ (БАНЕР) */
 
 .baner-title {
   color: var(--white-text-color);
@@ -158,10 +201,28 @@ p {
   margin-bottom: 30px;
 }
 
+.baner-button {
+  color: var(--white-text-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: 0px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: inline-block;
+  
+}
+
 /* Стилизация секции 1 преимущества */
 
 .benefit {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 93px;
+  margin-bottom: 93px;
 }
 
 .benefit-title {
@@ -174,7 +235,12 @@ p {
   margin-bottom: 10px;
 }
 
+.benefit-list{
+max-width: 260px;
+}
+
 .benefit-desctription {
+  /* max-width: 270px; */
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 14px;
@@ -293,7 +359,8 @@ p {
   padding: 6px 22px;
 }
 
-.radiobutton-portfolio:hover {
+.radiobutton-portfolio:hover,
+.radiobutton-portfolio:focus {
   color: var(--white-text-color);
   background-color: var(--accent-color);
 }
@@ -326,7 +393,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-  outline: 1px solid tomato;
+  outline: 1px dotted rgb(238, 4, 4);
   padding-left: 15px;
   padding-right: 15px;
 }
