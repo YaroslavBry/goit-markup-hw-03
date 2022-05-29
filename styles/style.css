@@ -98,6 +98,16 @@ p {
   /* outline: 1px dotted rgb(238, 4, 4); */
 }
 
+.section-benefit {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 94px;
+  padding-bottom: 0;
+}
+
 /* ------------Стилизация HEADER------------ */
 
 .page-header {
